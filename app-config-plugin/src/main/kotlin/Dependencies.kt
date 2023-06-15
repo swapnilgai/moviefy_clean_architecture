@@ -6,6 +6,6 @@ object Dependencies {
     val espresso = "androidx.test.espresso:espresso-core:${Version.espresso}"
     val material = "com.google.android.material:material:${Version.material}"
 
-    
+
 }
 
