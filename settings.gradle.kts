@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "moviefy_clean_architecture"
 include(":app")
+includeBuild("app-build-plugin")
