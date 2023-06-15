@@ -4,4 +4,5 @@ object Version {
     val junit = "4.13.2"
     val junitTestExt = "1.1.3"
     val espresso = "3.4.0"
+    val material = "1.5.0"
 }

@@ -25,3 +25,22 @@ val ktlintFormat by tasks.creating(JavaExec::class) {
     mainClass.set("com.pinterest.ktlint.Main")
     args = listOf("-F", "src/**/*.kt", "**/*.gradle.kts")
 }
+
+val testAllUnitTests by tasks.register("testAllUnitTests") {
+    group = "verification"
+    description = "Run all tests"
+    dependsOn(
+        "testDebugUnitTest"
+//        gradle.includeBuilds.filter {
+//            it.name != "app-config"
+//        }.map { it.task(":testAllUnitTests")}
+    )
+}
+
+// tasks.withType(Test) {
+//    testLogging {
+//        exceptionFormat "full"
+//        events "started", "skipped", "passed", "failed"
+//        showStandardStreams true
+//    }
+// }

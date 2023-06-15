@@ -4,4 +4,5 @@ object Dependencies {
     val junit = "junit:junit:${Version.junit}"
     val junitTestExt = "androidx.test.ext:junit:${Version.junitTestExt}"
     val espresso = "androidx.test.espresso:espresso-core:${Version.espresso}"
+    val material = "com.google.android.material:material:${Version.material}"
 }

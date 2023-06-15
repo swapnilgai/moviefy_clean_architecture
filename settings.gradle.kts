@@ -13,6 +13,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "moviefy_clean_architecture"
+
+includeBuild("app-config-plugin")
 include(":app")
-includeBuild("app-build-plugin")

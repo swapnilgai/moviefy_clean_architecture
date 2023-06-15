@@ -11,8 +11,8 @@ repositories {
 }
 
 gradlePlugin {
-    plugins.register("app-config") {
-        id = "app-config"
+    plugins.register("configs") {
+        id = "configs"
         implementationClass = "com.example.moviefy_clean_architecture.BuildPlugin"
     }
 }

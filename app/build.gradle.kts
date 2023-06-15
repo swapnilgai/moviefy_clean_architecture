@@ -1,9 +1,7 @@
-
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("app-config")
+    id("configs")
 }
 
 android {
@@ -34,6 +32,7 @@ android {
 
 dependencies {
     implementation(Dependencies.appcompat)
+    implementation(Dependencies.material)
     implementation(Dependencies.androidXCore)
     androidTestImplementation(Dependencies.espresso)
     testImplementation(Dependencies.junit)
