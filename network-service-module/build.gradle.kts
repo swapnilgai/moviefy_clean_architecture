@@ -11,5 +11,4 @@ android {
 dependencies {
     implementation(Dependencies.koinAndroid)
     implementation(Dependencies.retrofit)
-    testImplementation(Dependencies.koinTest)
 }

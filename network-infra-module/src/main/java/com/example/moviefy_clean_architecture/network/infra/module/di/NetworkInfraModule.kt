@@ -8,7 +8,7 @@ import org.koin.dsl.module
 class NetworkInfraModule(val appInfo: AppInfo) {
     val koinModule = module {
         single {
-            AddHeaderInterceptor(get())
+            AddHeaderInterceptor(appInfo)
         }
         single {
             ServiceFactory(get())

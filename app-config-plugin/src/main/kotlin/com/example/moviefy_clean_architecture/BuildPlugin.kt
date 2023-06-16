@@ -4,33 +4,35 @@ import ProjectProperties
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import java.io.ByteArrayInputStream
+import org.gradle.api.provider.Provider
+import org.gradle.kotlin.dsl.extra
+import java.io.File
+import java.io.FileInputStream
 import java.io.InputStreamReader
 import java.util.Properties
 
 class BuildPlugin : Plugin<Project> {
     override fun apply(target: Project) {
-
-
+        with(target){
+            setApiProperties(getLocalProperty())
+        }
     }
 }
 
-
-private fun Project.loadProperties(): ProjectProperties {
-
+internal fun Project.getLocalProperty(file: String = "apikey.properties"): ProjectProperties {
     val projectProperties = Properties()
-
-    projectProperties.load(
-        InputStreamReader(
-            ByteArrayInputStream(
-                providers.fileContents(layout.projectDirectory.file("../apikey.properties"))
-                    .asBytes
-                    .forUseAtConfigurationTime()
-                    .orNull
-                    ?: throw GradleException("Mission apikey.properties")
-            )
-        )
-    )
+    val localProperties = File(file)
+    if (localProperties.isFile) {
+        InputStreamReader(FileInputStream(localProperties), Charsets.UTF_8).use { reader ->
+            projectProperties.load(reader)
+        }
+    } else throw GradleException("Mission apikey.properties")
 
     return ProjectProperties(apiKey = projectProperties.getProperty("API_KEY"))
 }
+
+private fun Project.setApiProperties(projectProperties: ProjectProperties){
+    rootProject.extra.set("ProjectProperties", projectProperties)
+}
+
+fun Project.projectProperties() : Provider<ProjectProperties> = provider { rootProject.extra.get("ProjectProperties") as ProjectProperties }
