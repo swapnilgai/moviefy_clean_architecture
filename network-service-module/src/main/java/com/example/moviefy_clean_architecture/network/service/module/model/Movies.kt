@@ -1,6 +1,5 @@
-package com.example.moviefy_clean_architecture.network.module.model
+package com.example.moviefy_clean_architecture.network.service.module.model
 
-import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
 class Movies : Serializable {

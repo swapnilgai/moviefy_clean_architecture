@@ -1,8 +1,8 @@
-package com.example.moviefy_clean_architecture.network.module
+package com.example.moviefy_clean_architecture.network.service.module
 
 import retrofit2.http.GET
 import retrofit2.http.QueryMap
-import com.example.moviefy_clean_architecture.network.module.model.Result
+import com.example.moviefy_clean_architecture.network.service.module.model.Result
 
 interface GetMoviesService {
     // Get Upcoming movies
