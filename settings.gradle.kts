@@ -14,5 +14,8 @@ dependencyResolutionManagement {
     }
 }
 
-includeBuild("app-config-plugin")
 include(":app")
+include(":network-service-module")
+include(":network-infra-module")
+include(":common")
+includeBuild("app-config-plugin")

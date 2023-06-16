@@ -31,6 +31,7 @@ android {
 }
 
 dependencies {
+
     implementation(Dependencies.appcompat)
     implementation(Dependencies.material)
     implementation(Dependencies.androidXCore)
