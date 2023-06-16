@@ -11,4 +11,6 @@ object Dependencies {
     const val koinTest = "io.insert-koin:koin-android-test:${Version.koinVersion}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofit}"
     const val retrofitGson = "com.squareup.retrofit2:converter-gson:${Version.retrofit}"
+    const val okHttp = "com.squareup.okhttp3:okhttp:${Version.okHttp}"
+    const val okHttpLogger = "com.squareup.okhttp3:logging-interceptor:${Version.okHttp}"
 }

@@ -12,5 +12,7 @@ dependencies {
     implementation(Dependencies.koinAndroid)
     implementation(Dependencies.retrofit)
     implementation(Dependencies.retrofitGson)
+    implementation(Dependencies.okHttp)
+    implementation(Dependencies.okHttpLogger)
     testImplementation(Dependencies.koinTest)
 }
