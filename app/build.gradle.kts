@@ -34,7 +34,10 @@ dependencies {
     implementation(Dependencies.appcompat)
     implementation(Dependencies.material)
     implementation(Dependencies.androidXCore)
+    implementation(Dependencies.koinAndroid)
+
     androidTestImplementation(Dependencies.espresso)
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitTestExt)
+    testImplementation(Dependencies.koinTest)
 }
