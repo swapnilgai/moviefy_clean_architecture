@@ -5,7 +5,7 @@ import com.example.moviefy_clean_architecture.network.infra.module.AddHeaderInte
 import com.example.moviefy_clean_architecture.network.infra.module.ServiceFactory
 import org.koin.dsl.module
 
-class NetworkInfraModule(val appInfo: AppInfo) {
+class NetworkInfraModule(private val appInfo: AppInfo) {
     val koinModule = module {
         single {
             AddHeaderInterceptor(appInfo)

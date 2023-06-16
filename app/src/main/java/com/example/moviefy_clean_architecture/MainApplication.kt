@@ -1,12 +1,18 @@
 import android.app.Application
-import org.koin.android.ext.koin.androidContext
+import com.example.moviefy_clean_architecture.BuildConfig
+import com.example.moviefy_clean_architecture.common.AppInfo
+import com.example.moviefy_clean_architecture.network.infra.module.di.NetworkInfraModule
 import org.koin.core.context.startKoin
 
 class MainApplication : Application() {
+
+    val appInfo = createAppConfig()
+    val networkInfraModule = NetworkInfraModule(appInfo).koinModule
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            androidContext(this@MainApplication)
+            networkInfraModule
         }
     }
+    fun createAppConfig(): AppInfo = AppInfo(BuildConfig.API_KEY)
 }

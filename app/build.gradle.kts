@@ -29,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-                targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "1.8"
     }
 }
 
@@ -43,10 +43,10 @@ dependencies {
     implementation(Dependencies.androidXCore)
     implementation(Dependencies.koinAndroid)
     implementation(dependencies.project(":common"))
-    implementation(dependencies.project(":network-infra-module"))
     implementation(dependencies.project(":network-service-module"))
+    implementation(dependencies.project(":network-infra-module"))
+    implementation(Dependencies.androidCoreKtx)
     androidTestImplementation(Dependencies.espresso)
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitTestExt)
-    // testImplementation(Dependencies.koinTest)
 }
