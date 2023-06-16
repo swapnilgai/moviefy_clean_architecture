@@ -6,4 +6,5 @@ object Version {
     const val espresso = "3.4.0"
     const val material = "1.5.0"
     const val koinVersion = "3.4.2"
+    const val retrofit = "2.9.0"
 }
