@@ -13,4 +13,6 @@ object Dependencies {
     const val retrofitGson = "com.squareup.retrofit2:converter-gson:${Version.retrofit}"
     const val okHttp = "com.squareup.okhttp3:okhttp:${Version.okHttp}"
     const val okHttpLogger = "com.squareup.okhttp3:logging-interceptor:${Version.okHttp}"
+    const val androidCoreKtx = "androidx.core:core-ktx:${Version.androidktxCore}"
+    const val androidKotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Version.kotlinVersion}"
 }

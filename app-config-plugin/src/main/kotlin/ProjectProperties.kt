@@ -1,0 +1,1 @@
+data class ProjectProperties(val apiKey: String)

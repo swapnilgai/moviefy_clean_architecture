@@ -8,4 +8,6 @@ object Version {
     const val koinVersion = "3.4.2"
     const val retrofit = "2.9.0"
     const val okHttp = "4.1.0"
+    const val androidktxCore= "1.9.0"
+    const val kotlinVersion = "1.8.10"
 }
