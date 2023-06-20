@@ -18,7 +18,7 @@ fun CoroutineScope.InteractorLaunch(
     return if(forceRefresh)
         launch(context, start, block)
     else {
-       val newContext =  clearCache + context
+       val newContext =  clearCache + this.coroutineContext + context
        launch(newContext, start, block)
     }
 }
