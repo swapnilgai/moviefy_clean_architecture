@@ -10,7 +10,6 @@ repositories {
     gradlePluginPortal()
 }
 
-
 gradlePlugin {
     plugins.register("configs") {
         id = "configs"
