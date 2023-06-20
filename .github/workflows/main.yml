@@ -18,7 +18,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-        run: echo java --version
+      - run: echo java --version
       - name: Set app.properties
         run: echo " ${{ secrets.APP_PROPERTIES }} " >> apikey.properties
       - name: Grant execute permission for gradlew
