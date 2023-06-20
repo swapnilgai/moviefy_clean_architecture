@@ -24,7 +24,6 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Build app
-        working-directory: moviefy_clean_architecture
         run: ./gradlew assembleDebug
 
 
