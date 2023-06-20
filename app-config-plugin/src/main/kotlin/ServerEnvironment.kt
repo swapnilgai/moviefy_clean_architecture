@@ -5,7 +5,6 @@ enum class ServerEnvironment(
 ) {
     DEVELOPMENT(
         serverName = "Dev",
-        baseUrl = "",
-        headers = emptyMap()
+        baseUrl = "https://api.themoviedb.org/3/"
     )
 }
