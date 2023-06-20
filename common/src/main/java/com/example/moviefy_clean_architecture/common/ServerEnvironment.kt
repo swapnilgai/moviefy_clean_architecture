@@ -1,3 +1,5 @@
+package com.example.moviefy_clean_architecture.common
+
 enum class ServerEnvironment(
     val serverName: String,
     val baseUrl: String,
@@ -5,6 +7,10 @@ enum class ServerEnvironment(
 ) {
     DEVELOPMENT(
         serverName = "Dev",
+        baseUrl = "https://api.themoviedb.org/3/"
+    ),
+    PRODUCTION(
+        serverName = "Prod",
         baseUrl = "https://api.themoviedb.org/3/"
     )
 }

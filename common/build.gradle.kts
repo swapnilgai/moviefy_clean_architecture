@@ -17,6 +17,7 @@ android {
 }
 
 dependencies {
+    implementation(Dependencies.koinAndroid)
     implementation(Dependencies.androidCoreKtx)
     implementation(Dependencies.androidKotlinStdLib)
 }
