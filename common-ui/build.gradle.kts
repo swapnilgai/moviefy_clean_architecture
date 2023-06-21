@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.moviefy_clean_architecture.interactor"
+    namespace = "com.example.moviefy_clean_architecture.common.ui"
     compileSdk = 33
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

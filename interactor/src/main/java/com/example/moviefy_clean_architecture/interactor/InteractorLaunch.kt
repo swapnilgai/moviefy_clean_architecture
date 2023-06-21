@@ -7,7 +7,7 @@ import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 
-val clearCache = CacheCoroutineContextElement(setCache = false)
+val allowCache = CacheCoroutineContextElement(setCache = true)
 
 fun CoroutineScope.InteractorLaunch(
     context: CoroutineContext = EmptyCoroutineContext,
@@ -18,7 +18,7 @@ fun CoroutineScope.InteractorLaunch(
     return if(forceRefresh)
         launch(context, start, block)
     else {
-       val newContext =  clearCache + this.coroutineContext + context
+       val newContext =  allowCache + this.coroutineContext + context
        launch(newContext, start, block)
     }
 }
