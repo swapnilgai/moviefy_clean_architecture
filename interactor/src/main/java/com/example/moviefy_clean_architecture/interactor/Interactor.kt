@@ -6,6 +6,8 @@ import androidx.annotation.RequiresApi
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext
+import retrofit2.HttpException
+import retrofit2.Response
 import kotlin.coroutines.coroutineContext
 
 interface Interactor
@@ -34,7 +36,7 @@ suspend fun <T> Interactor.withInteractorContext(
                 }
                 if(cacheKey!=null) cache.put(cacheKey, blockResult)
             } catch (e: Exception){
-                //TODO add/handle interactor exception
+                throw e.toInteractorException()
             }
             return@withContext blockResult
         }
