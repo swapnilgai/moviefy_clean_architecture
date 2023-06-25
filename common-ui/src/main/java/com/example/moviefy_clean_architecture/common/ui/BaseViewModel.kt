@@ -10,10 +10,12 @@ import kotlinx.coroutines.SupervisorJob
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-abstract class BaseViewModel<ContentT>: ViewModel(), KoinComponent {
+abstract class BaseViewModel<ContentT>(initialContent: ContentT): ViewModel(), KoinComponent {
 
     private val resource: Resources by inject()
     abstract fun render(content: ContentT)
+
+    val uiChannel = UiChannelImpl(initialContent)
 
     private val coroutineExceptionHandler = CoroutineExceptionHandler { coroutineContext, throwable ->
         when(throwable) {
@@ -27,14 +29,13 @@ abstract class BaseViewModel<ContentT>: ViewModel(), KoinComponent {
                 resource.getString(org.koin.android.R.string.abc_action_bar_home_description)
             )
         }
-
     }
 
     protected val viewModelScope = CoroutineScope(
         SupervisorJob() + Dispatchers.Main + coroutineExceptionHandler
     )
-
-    private fun setContent(){ }
-
-    private fun shoeDialog(message: String){ }
+    private fun setContent(content: ContentT){
+        uiChannel.setContent(content)
+    }
+    private fun shoeDialog(message: String){}
 }

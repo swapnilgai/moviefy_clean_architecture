@@ -20,13 +20,11 @@ interface UiChannel<ContentT> {
 }
 
 class UiChannelImpl<ContentT>(initialContent: ContentT): UiChannel<ContentT> {
-
    private val loadingChannel = Channel<UiEvent.Loading>(capacity = CONFLATED)
    private val errorChannel = Channel<UiEvent.Error>(capacity = CONFLATED)
    private val contentChannel = ConflatedBroadcastChannel(
         UiEvent.Content(value = initialContent)
     )
-
     override suspend fun observe(scope: CoroutineScope): ReceiveChannel<UiEvent<out ContentT>> {
         return scope.produce(Dispatchers.Main, capacity = UNLIMITED ) {
             val contentChannelSub = contentChannel.openSubscription()
