@@ -21,4 +21,5 @@ dependencies {
     implementation(Dependencies.androidCoreKtx)
     implementation(Dependencies.androidKotlinStdLib)
     implementation(Dependencies.retrofit)
+    implementation(project(mapOf("path" to ":interactor")))
 }
