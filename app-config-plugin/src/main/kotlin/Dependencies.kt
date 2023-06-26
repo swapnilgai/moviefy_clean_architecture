@@ -15,4 +15,12 @@ object Dependencies {
     const val okHttpLogger = "com.squareup.okhttp3:logging-interceptor:${Version.okHttp}"
     const val androidCoreKtx = "androidx.core:core-ktx:${Version.androidktxCore}"
     const val androidKotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Version.kotlinVersion}"
+    object Compose {
+        const val compiler = "androidx.compose.compiler:compiler:${Version.compose}"
+        const val runtime = "androidx.compose.runtime:runtime:${Version.compose}"
+        const val ui = "androidx.compose.ui:ui:${Version.compose}"
+        const val foundation = "androidx.compose.foundation:foundation:${Version.compose}"
+        const val constraintLayout = "androidx.constraintlayout:constraintlayout-compose:${Version.composeConstraintLayout}"
+        const val tooling = "androidx.compose.ui:ui-tooling:${Version.compose}"
+    }
 }

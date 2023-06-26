@@ -10,4 +10,7 @@ object Version {
     const val okHttp = "4.1.0"
     const val androidktxCore= "1.9.0"
     const val kotlinVersion = "1.8.10"
+    const val compose = "1.4.2"
+    const val composeConstraintLayout = "1.0.1"
+    const val kotlinCompilerVersion = "1.6.21"
 }
