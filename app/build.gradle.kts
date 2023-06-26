@@ -1,3 +1,4 @@
+import com.example.moviefy_clean_architecture.addComposeDependencies
 import com.example.moviefy_clean_architecture.projectProperties
 
 plugins {
@@ -12,7 +13,13 @@ android {
     compileSdk = 33
     buildFeatures {
         buildConfig = true
+        compose = true
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Version.compose
+    }
+
     defaultConfig {
         buildConfigField("String", "API_KEY", "\"${projectProperties.apiKey}\"")
         applicationId = "com.example.moviefy_clean_architecture"
@@ -36,6 +43,8 @@ android {
         jvmTarget = "1.8"
     }
 }
+
+addComposeDependencies()
 
 dependencies {
     implementation(Dependencies.appcompat)

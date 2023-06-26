@@ -1,10 +1,13 @@
 package com.example.moviefy_clean_architecture
 
+import Dependencies
 import ProjectProperties
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.provider.Provider
+import org.gradle.kotlin.dsl.DependencyHandlerScope
+import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.extra
 import java.io.File
 import java.io.FileInputStream
@@ -36,3 +39,16 @@ private fun Project.setApiProperties(projectProperties: ProjectProperties){
 }
 
 fun Project.projectProperties() : Provider<ProjectProperties> = provider { rootProject.extra.get("ProjectProperties") as ProjectProperties }
+
+fun Project.addComposeDependencies() {
+    dependencies {
+        implementation(Dependencies.Compose.foundation)
+        implementation(Dependencies.Compose.compiler)
+        implementation(Dependencies.Compose.runtime)
+        implementation(Dependencies.Compose.ui)
+        implementation(Dependencies.Compose.tooling)
+        implementation(Dependencies.Compose.constraintLayout)
+    }
+}
+
+fun DependencyHandlerScope.implementation(dependency: Any) = add("implementation", dependency)
