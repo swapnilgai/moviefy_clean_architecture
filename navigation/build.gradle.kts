@@ -20,4 +20,6 @@ dependencies {
     implementation(Dependencies.koinAndroid)
     implementation(Dependencies.androidCoreKtx)
     implementation(Dependencies.androidKotlinStdLib)
+    implementation(Dependencies.Navigation.navigation)
+    implementation(Dependencies.Navigation.navigationUi)
 }

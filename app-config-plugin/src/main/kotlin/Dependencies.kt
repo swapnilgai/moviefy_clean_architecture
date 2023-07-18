@@ -23,4 +23,9 @@ object Dependencies {
         const val constraintLayout = "androidx.constraintlayout:constraintlayout-compose:${Version.composeConstraintLayout}"
         const val tooling = "androidx.compose.ui:ui-tooling:${Version.compose}"
     }
+
+    object Navigation {
+        const val navigation = "androidx.navigation:navigation-navigation-ktx:${Version.navVersion}"
+        const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Version.navVersion}"
+    }
 }

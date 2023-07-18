@@ -13,4 +13,5 @@ object Version {
     const val compose = "1.4.2"
     const val composeConstraintLayout = "1.0.1"
     const val kotlinCompilerVersion = "1.6.21"
+    const val navVersion = "2.6.0"
 }
