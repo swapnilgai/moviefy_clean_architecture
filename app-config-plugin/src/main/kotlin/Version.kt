@@ -1,5 +1,5 @@
 object Version {
-    const val androidXCore = "1.8.0"
+    const val androidXCore = "1.8.1"
     const val appcompat = "1.4.1"
     const val junit = "4.13.2"
     const val junitTestExt = "1.1.3"
@@ -14,4 +14,5 @@ object Version {
     const val composeConstraintLayout = "1.0.1"
     const val kotlinCompilerVersion = "1.6.21"
     const val navVersion = "2.6.0"
+    const val swipeRefreshLayout = "1.1.0"
 }

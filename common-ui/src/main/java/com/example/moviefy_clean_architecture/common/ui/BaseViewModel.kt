@@ -13,7 +13,6 @@ import org.koin.core.component.inject
 abstract class BaseViewModel<ContentT>(initialContent: ContentT): ViewModel(), KoinComponent {
 
     private val resource: Resources by inject()
-    abstract fun render(content: ContentT)
 
     val uiChannel = UiChannelImpl(initialContent)
 

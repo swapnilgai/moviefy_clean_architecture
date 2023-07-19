@@ -1,7 +1,7 @@
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -20,6 +20,5 @@ dependencies {
     implementation(Dependencies.koinAndroid)
     implementation(Dependencies.androidCoreKtx)
     implementation(Dependencies.androidKotlinStdLib)
-    implementation(Dependencies.Navigation.navigation)
     implementation(Dependencies.Navigation.navigationUi)
 }

@@ -15,6 +15,7 @@ object Dependencies {
     const val okHttpLogger = "com.squareup.okhttp3:logging-interceptor:${Version.okHttp}"
     const val androidCoreKtx = "androidx.core:core-ktx:${Version.androidktxCore}"
     const val androidKotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Version.kotlinVersion}"
+    const val swipeToRefresh = "androidx.swiperefreshlayout:swiperefreshlayout:${Version.swipeRefreshLayout}"
     object Compose {
         const val compiler = "androidx.compose.compiler:compiler:${Version.compose}"
         const val runtime = "androidx.compose.runtime:runtime:${Version.compose}"
@@ -25,7 +26,7 @@ object Dependencies {
     }
 
     object Navigation {
-        const val navigation = "androidx.navigation:navigation-navigation-ktx:${Version.navVersion}"
         const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Version.navVersion}"
+        const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Version.navVersion}"
     }
 }

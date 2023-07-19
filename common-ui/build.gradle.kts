@@ -22,4 +22,5 @@ dependencies {
     implementation(Dependencies.androidKotlinStdLib)
     implementation(Dependencies.retrofit)
     implementation(project(mapOf("path" to ":interactor")))
+    implementation(Dependencies.swipeToRefresh)
 }
