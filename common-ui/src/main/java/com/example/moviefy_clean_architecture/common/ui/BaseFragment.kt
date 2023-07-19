@@ -1,5 +1,10 @@
 package com.example.moviefy_clean_architecture.common.ui
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
@@ -7,6 +12,8 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
 abstract class BaseFragment<ContentT>: Fragment() {
+
+    @get:LayoutRes abstract val layoutId: Int
 
     abstract val viewModel: BaseViewModel<ContentT>
     abstract fun render(contentT: ContentT)
@@ -25,6 +32,17 @@ abstract class BaseFragment<ContentT>: Fragment() {
             }
         }
 
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+        val root = inflater.inflate(R.layout.fragment_base, container, false)
+
+        return super.onCreateView(inflater, container, savedInstanceState)
     }
 
     private fun setContent(contentT: ContentT){

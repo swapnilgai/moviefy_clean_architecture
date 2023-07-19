@@ -9,8 +9,10 @@ object Version {
     const val retrofit = "2.9.0"
     const val okHttp = "4.1.0"
     const val androidktxCore= "1.9.0"
-    const val kotlinVersion = "1.8.10"
+    const val kotlinVersion = "1.8.20"
     const val compose = "1.4.2"
     const val composeConstraintLayout = "1.0.1"
     const val kotlinCompilerVersion = "1.6.21"
+    const val navVersion = "2.6.0"
+    const val swipeRefreshLayout = "1.1.0"
 }

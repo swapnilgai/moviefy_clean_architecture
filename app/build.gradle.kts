@@ -5,6 +5,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("configs")
+    id("androidx.navigation.safeargs.kotlin")
 }
 val projectProperties: ProjectProperties = projectProperties().get()
 
@@ -17,7 +18,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = Version.compose
+        kotlinCompilerExtensionVersion = "1.4.6"
     }
 
     defaultConfig {
@@ -52,10 +53,14 @@ dependencies {
     implementation(Dependencies.androidXCore)
     implementation(Dependencies.koinAndroid)
     implementation(dependencies.project(":common"))
+    implementation(dependencies.project(":common-ui"))
     implementation(dependencies.project(":network-service-module"))
     implementation(dependencies.project(":network-infra-module"))
+    implementation(dependencies.project(":navigation"))
     implementation(Dependencies.androidCoreKtx)
     androidTestImplementation(Dependencies.espresso)
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitTestExt)
+    implementation(Dependencies.Navigation.navigationUi)
+    implementation(Dependencies.Navigation.navigationFragment)
 }
