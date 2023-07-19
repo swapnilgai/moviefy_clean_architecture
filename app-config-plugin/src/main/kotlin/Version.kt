@@ -1,5 +1,5 @@
 object Version {
-    const val androidXCore = "1.8.1"
+    const val androidXCore = "1.8.0"
     const val appcompat = "1.4.1"
     const val junit = "4.13.2"
     const val junitTestExt = "1.1.3"
