@@ -16,6 +16,9 @@ object Dependencies {
     const val androidCoreKtx = "androidx.core:core-ktx:${Version.androidktxCore}"
     const val androidKotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Version.kotlinVersion}"
     const val swipeToRefresh = "androidx.swiperefreshlayout:swiperefreshlayout:${Version.swipeRefreshLayout}"
+    const val servicesLocation = "com.google.android.gms:play-services-location:${Version.location}"
+    const val servicesMaps = "com.google.android.gms:play-services-maps:${Version.maps}"
+    const val permissions = "com.google.accompanist:accompanist-permissions:${Version.permission}"
     object Compose {
         const val compiler = "androidx.compose.compiler:compiler:${Version.compose}"
         const val runtime = "androidx.compose.runtime:runtime:${Version.compose}"

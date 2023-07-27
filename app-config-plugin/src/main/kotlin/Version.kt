@@ -15,4 +15,7 @@ object Version {
     const val kotlinCompilerVersion = "1.6.21"
     const val navVersion = "2.6.0"
     const val swipeRefreshLayout = "1.1.0"
+    const val location = "21.0.1"
+    const val maps = "18.1.0"
+    const val permission = "0.30.1"
 }
